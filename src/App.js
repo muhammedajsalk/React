@@ -1,7 +1,5 @@
 
 import React from 'react'
-import axios from 'axios'
-import {useState} from 'react'
 import NavBar from './components/NavBar/NavBar'
 import{Actions,comedy,Documentaries,Horror,orginals, Romance} from './urls'
 import './App.css'

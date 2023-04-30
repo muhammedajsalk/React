@@ -11,9 +11,10 @@ function RawPost(props) {
       console.log(response.data);
       setMovie(response.data.results)
     }).catch(err=>{
+      console.log(err);
      // alert('network error')
-    })
-  }, [])
+    });
+  },[])
  
     const opts = {
       height: '600',
