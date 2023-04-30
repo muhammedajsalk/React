@@ -35,16 +35,22 @@ function RawPost(props) {
       })
    }
   return (
+    
     <div className='row'>
         <h2>{props.title}</h2>
         <div className='posters'>
+        
            {movie.map((obj)=>
-             <img onClick={()=>handleMovie(obj.id)} className={props.isSmall ? 'smallPoster' : 'poster'} alt='poster' src={`${imageUrl+obj.backdrop_path}`}/>
+             <img key={obj.id} onClick={()=>handleMovie(obj.id)} className={props.isSmall ? 'smallPoster' : 'poster'} alt='poster' src={`${imageUrl+obj.backdrop_path}`}/>
+             
            )}
         </div>
+        
        {urlid && <YouTube opts={opts} videoId={urlid.key}/>}
     </div>
+    
   )
 }
+
 
 export default RawPost
